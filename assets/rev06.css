@@ -1,0 +1,72 @@
+/* GEOX REV06 - estilos complementares, ainda não integrados ao index.html */
+:root { --geox:#651d34; --geox-soft:#f6edf1; }
+.geox-sector { border:1px solid #e4d7dc; border-radius:10px; padding:16px; background:#fff; }
+.geox-sector h2 { color:var(--geox); margin-top:0; }
+.geox-kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:12px; }
+.geox-kpi { border:1px solid #e4d7dc; border-radius:8px; padding:12px; }
+.geox-kpi strong { display:block; font-size:24px; color:var(--geox); }
+@media print { @page { size:A4; margin:15mm; } .geox-no-print { display:none!important; } }
+
+/* Correção de exibição dos módulos */
+#gx06-root {
+    display: none;
+}
+
+#workspace.gx06-active #gx06-root {
+    display: block;
+    width: 100%;
+}
+
+#workspace.gx06-active .workspace-content > :not(#gx06-root) {
+    display: none !important;
+}
+
+.gx06-panel {
+    background: #ffffff;
+    border: 1px solid #e4d7dc;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.gx06-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.gx06-metric {
+    background: #ffffff;
+    border: 1px solid #e4d7dc;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.gx06-metric strong {
+    display: block;
+    font-size: 26px;
+    color: #651d34;
+}
+
+.gx06-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.gx06-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.gx06-form input,
+.gx06-form select,
+.gx06-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gx06-wide {
+    grid-column: 1 / -1;
+}
