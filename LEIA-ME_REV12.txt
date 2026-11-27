@@ -1,0 +1,7 @@
+GEOX REV12 - atualização incremental sobre REV11
+1. Faça backup dos arquivos atuais do GitHub.
+2. Substitua index.html na raiz e assets/app.js na pasta assets. Preserve os demais arquivos REV11.
+3. Aguarde GitHub Actions e pressione Ctrl+Shift+R.
+4. Abra Manutenção > Dashboard de abastecimento. Escolha datas, obra e veículo; escolha o tipo de medidor e Filtrar.
+Não execute SQL: usa a tabela abastecimentos existente da REV11.
+Consumo estimado: diferença entre leituras consecutivas / litros do segundo abastecimento (km/L), ou litros / diferença de horas (L/h). Requer mesmo nível do tanque em cada abastecimento, mesmo combustível e identificação consistente. Não misture tipos de medidor. Primeira leitura e leituras inválidas não geram média. Intervalos atribuídos ao abastecimento final. Limite de 1000 registros da REV11. Não há classificação automática de medidor nem confirmação de tanque cheio.
