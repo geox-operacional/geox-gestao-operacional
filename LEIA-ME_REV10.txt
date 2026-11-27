@@ -1,0 +1,6 @@
+REV10 — atualização incremental da REV09/09A.
+1. Faça backup e teste em ambiente de homologação.
+2. No SQL Editor execute somente sql/REV10.sql. REV08/09 são referências de dependências já instaladas; não reimporte estoque.
+3. Publique index.html e assets/ no GitHub, mantendo caminhos. Aguarde Actions e atualize Ctrl+Shift+R.
+4. Teste cadastro com obra e quantidade, edição administrativa da remessa, cancelamento/exclusão lógica, estorno e filtros. Exclusão é arquivamento; itens integrados não são editados diretamente. Para mudar itens, cancele e recrie a remessa. Estoque atual é separado das movimentações filtradas por data; não reconstrói saldo histórico.
+SQL não executado nem homologado. JavaScript verificado por Node.
