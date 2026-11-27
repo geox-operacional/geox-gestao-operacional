@@ -1,0 +1,2 @@
+GEOX REV13 — atualização visual incremental sobre REV12.
+Não execute SQL. Faça backup dos arquivos atuais. Envie index.html na raiz, assets/app.js em assets e assets/css/rev13.css em assets/css. Preserve os demais arquivos, inclusive rev07-almoxarifado.js. Aguarde GitHub Pages e Ctrl+Shift+R. Teste login, menus, atalhos, remessas, estoque e abastecimento. Para reverter, restaure index.html e app.js da REV12. Gráficos usam registros carregados (limite anterior de 1000); sem dados fictícios. Tema salvo localmente. Teste visual e autenticado ainda necessário.
