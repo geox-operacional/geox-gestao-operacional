@@ -1,0 +1,8 @@
+GEOX REV09 — instalação manual / homologação
+1. Faça backup integral do Supabase e do GitHub. Teste em cópia do banco.
+2. Confira CONFERENCIA_INVENTARIO.csv. Nomes das abas prevalecem sobre cabeçalhos; confira nomes exatos das obras no banco. O SQL compara nomes sem distinguir maiúsculas, mas não resolve apelidos ou acentos. Ajuste nomes no SQL antes de executar se necessário.
+3. Se REV08 ainda não foi aplicada, execute sql/REV08.sql. Depois execute sql/REV09.sql.
+4. Finalize/cancele remessas em trânsito. Execute sql/IMPORTACAO_ESTOQUE.sql inteiro de uma vez. A transação substitui todos os saldos, mantém histórico e guarda cópias dos saldos e linhas originais. Não repita a importação. Não há preços na planilha: novos materiais ficam com custo zero. Patrimônio consta na descrição; observações ficam na tabela fonte e CSV. Não cria registros individuais de manutenção.
+5. Envie index.html e a pasta assets ao GitHub, substituindo arquivos. Aguarde Actions e pressione Ctrl+Shift+R. Menu Cadastro de obras permite criar e editar conforme permissões existentes.
+6. Teste nova obra, edição, remessa, consumo e relatórios antes de liberar produção.
+Limitações: SQL não executado em banco de teste; importação futura via Excel na interface e cadastros adicionais não implementados. Histórico de ajuste fica nas tabelas de backup/fonte, não no relatório de movimentações. O cadastro de obras não inclui responsável novo. Não apague arquivos SQL anteriores do repositório.
